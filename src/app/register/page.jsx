@@ -23,7 +23,7 @@ const page = () => {
 
     if (res.ok) {
       const user = await res.json();
-      alert("user registeration successeful");
+      console.log(user);
       setUsername("");
       setPassword("");
     } else {

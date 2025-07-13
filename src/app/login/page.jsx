@@ -24,7 +24,7 @@ const page = () => {
       }
 
       const user = await res.json();
-      alert("user LoggedIn successfully");
+      console.log(user);
       setUsername("");
       setPassword("");
     } catch (err) {
