@@ -1,0 +1,161 @@
+.footer {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 3rem 6rem;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: bottom;
+}
+
+.footerTop h1 {
+    font-size: 6rem;
+    transform: translateY(-10px);
+}
+
+.footerTop nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 3rem;
+
+    transform: translateY(40px);
+}
+
+.footerTop a {
+    color: var(--light-blue);
+}
+
+.footerBottom {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerBottom > div {
+    width: 35%;
+    text-align: center;
+}
+
+.footerBottom h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.footerBottom p {
+    text-align: left;
+    color: var(--light-blue);
+}
+
+.contact ul{
+    list-style: none;
+    display: grid;
+    gap: 2rem;
+}
+
+.contact ul li {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/***************** RESPONSIVE ***************/
+@media screen and (max-width: 950px){
+
+.footer {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 3rem 4rem;
+}
+
+.footerTop h1 {
+    font-size: 5.3rem;
+}
+
+
+.footerTop nav {
+    gap: 2rem;
+
+}
+
+.footerBottom h1 {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+.footerBottom p {
+    font-size: 0.9rem;
+}
+
+.footerBottom > div {
+    width: 45%;
+    text-align: center;
+}
+
+
+}
+
+
+@media screen and (max-width: 760px){
+.footerBottom {
+    margin-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.footerBottom > div {
+    width: 100%;
+    text-align: center;
+}
+
+.footerTop h1 {
+    font-size: 3.3rem;
+    transform: translateY(0px);
+}
+
+
+.footerTop nav {
+    gap: 1.8rem;
+
+}
+
+
+
+}
+
+@media screen and (max-width: 640px) {
+    .footerTop {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3rem;
+    }
+
+    .footerTop h1 {
+    font-size: 3rem;
+}
+
+
+
+.footerBottom h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.footerBottom p {
+    font-size: 0.8rem;
+    margin: 0 auto;
+}
+
+}
+
+@media screen and (max-width: 350px) {
+    .footerTop nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

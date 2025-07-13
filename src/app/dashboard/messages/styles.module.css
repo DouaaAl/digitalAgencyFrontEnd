@@ -1,0 +1,68 @@
+.messages {
+    margin: 5rem auto;
+}
+
+.title {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 5rem;
+    color: var(--midlight-blue);
+}
+
+.messagesGrid {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: 4rem auto;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.message {
+    box-shadow: 0 0 3px 3px var(--light-blue);
+    width: 350px;
+    padding: 1rem 1.5rem 2rem 1rem;
+    text-align: left;
+    color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.messageServices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.messageServices span {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 7px;
+    border-radius: 15px;
+}
+
+.delete {
+    padding: 7px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(176, 8, 11);
+}
+
+@media screen and (max-width: 900px) {
+    .messages {
+        margin: 3rem auto;
+    }
+
+    .message {
+        transform: scale(0.9);
+    }
+}

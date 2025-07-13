@@ -1,0 +1,146 @@
+
+.box{
+  margin: 10rem auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 700px;
+  height: 350px;
+  opacity: 0;
+  transform: translateX(200px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(255, 255, 255, 0.77),rgba(29, 241, 241, 0.37), rgba(140, 213, 255, 0.512));
+  position: relative;
+  backdrop-filter: blur(40px);
+  border-top: 1px solid rgba(255, 255, 255, 0.726);
+  border-left: 1px solid rgba(255, 255, 255, 0.71);
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+  width: 0;
+  display: none;
+  overflow: hidden;
+}
+.content.appear {
+  opacity: 1;
+  width: 700px;
+  display: flex;
+  transform: translateX(00px);
+}
+
+.content .text {
+  padding: 0.5rem 5rem 3rem 5rem;
+}
+.content .text h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 0.5rem auto;
+  color: var(--dark-blue);
+}
+
+.content .text p {
+  color: var(--midark-blue);
+}
+
+.projects .color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.button {
+  font-size: 1.7rem;
+  padding: 0.5rem 3rem;
+  color: var(--midlight-blue);
+  border: none;
+  outline: none;
+  background-color:white;
+  border:none;
+  color: var(--midark-blue);
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.5s ease-in;
+}
+
+.button:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+
+/***************** RESPONSIVE ***************/
+@media screen and (max-width: 950px){
+
+.content {
+  width: 500px;
+  height: 420px;
+
+}
+.content.appear {
+  width: 500px;
+}
+
+}
+
+@media screen and (max-width: 740px){
+
+/************** PROJECTS *****************/
+
+.content {
+  width: 300px;
+  height: 350px;
+
+}
+.content.appear {
+  width: 300px;
+}
+
+
+
+.content .text {
+  padding: 0.5rem 2rem 1.5rem 2rem;
+}
+
+ .content .text h1 {
+  font-size: 2rem;
+}
+
+.content .text p {
+  font-size: 0.9rem;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 450px){
+  /************* PROJECTS ***********/
+
+  .content {
+    width: 250px;
+    height: 350px;
+
+  }
+  .content.appear {
+    width: 250px;
+  }
+
+  .content .text {
+    padding: 0.5rem 1rem 1.5rem 1rem;
+  }
+
+  .content .text h1 {
+    font-size: 2rem;
+  }
+
+  .content .text p {
+    font-size: 0.85rem;
+  }
+}

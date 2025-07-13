@@ -1,0 +1,166 @@
+.contact {
+    display: grid;
+    padding: 7rem;
+    grid-template-columns: 70% 5% 25%;
+    gap: 3rem;
+}
+
+.contact > article h1 {
+    font-size: 2 rem;
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+    font-weight: 800;
+}
+
+.contact > article p {
+    color: var(--midark-blue);
+    margin-bottom: 1rem;
+}
+
+.contact > article > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+}
+
+/*********** Footer ***********/
+
+.contact form span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.contact form span label {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.contact form span  input {
+    outline: none;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid var(--midark-blue);
+    font-size: 1.4rem;
+}
+
+.contact form > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.contact form h1 {
+    color: var(--dark-blue);
+}
+
+.contact button {
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: white;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+}
+
+
+
+.contact .checkboxes {
+margin: 3rem auto;
+display: flex;
+flex-wrap: wrap;
+}
+
+.checkboxes h4 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 1rem;
+}
+
+.checkboxes input {
+    height: 30px;
+    width: 30px;
+    background-color: var(--dark-blue) !important;
+    color: white !important;
+}
+
+
+.contact .submitMessage{
+    padding: 1rem 0;
+    color: rgb(55, 207, 9);
+}
+
+@media screen and (max-width: 950px){
+    .contact {
+    grid-template-columns: 100%;
+    padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    
+.contact > article h1 {
+    font-size: 1.4rem;
+}
+
+.contact > article p {
+    margin-bottom: 0.9rem;
+}
+
+.contact > article > div {
+    font-size: 1rem;
+}
+
+/*********** Footer ***********/
+
+
+.contact form span label {
+    font-size: 1.4rem;
+
+}
+
+.contact form span  input {
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+.contact form > div {
+
+    gap: 3rem;
+}
+
+
+.contact button {
+    font-size: 1.4rem;
+}
+
+.contact .checkboxes {
+    margin: 2rem auto;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+
+.checkboxes h4 {
+    font-size: 1.2rem;
+    gap: 0.5rem;
+}
+
+.checkboxes input {
+    height: 20px;
+    width: 200px;
+}
+
+
+
+}

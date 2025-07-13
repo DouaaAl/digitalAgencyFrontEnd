@@ -1,0 +1,14 @@
+.dashboardNav {
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    margin-bottom: 20px;
+}
+
+.dashboardNav a {
+    color: white;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+

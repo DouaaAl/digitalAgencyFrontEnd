@@ -1,0 +1,60 @@
+.statistics {
+    text-align: center;
+    margin: 6rem auto;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--midark-blue);
+    margin-bottom: 5rem;
+}
+
+.statisticsGrid {
+    display: flex;
+    justify-content: space-around;
+    margin: 4rem auto;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.statisticsGrid article {
+    box-shadow: 0 0 3px 3px var(--light-blue);
+    padding: 2rem;
+    width: 270px;
+
+}
+
+.statisticsGrid article h1 {
+    font-size: 2rem;
+    color: var(--midlight-blue);
+    margin-bottom: 20px;
+}
+
+.statisticsGrid article p {
+    font-size: 4rem;
+    color: var(--dark-blue);
+    font-weight: 800;
+}
+
+@media screen and (max-width: 900px){
+    
+.statisticsGrid article {
+    width: 200px;
+}
+
+.statisticsGrid article h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.statisticsGrid article p {
+    font-size: 2.2rem;
+}
+
+.title {
+    font-size: 2.7rem;
+    margin-bottom: 4rem;
+}
+}
+
+

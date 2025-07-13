@@ -1,0 +1,252 @@
+.main {
+    background: url("/servicebg.png") center/cover;
+    background-repeat: no-repeat;
+    padding-bottom: 20rem;
+}
+
+.header {
+    width: 100%;
+    height: 300px;
+    background: url("/images/header1.png") center/cover;
+    background-attachment: fixed;
+}
+
+/************ BENIFITS *************/
+
+.benefits, .portfolio {
+    width: 90%;
+    margin: 5rem auto;
+}
+
+.benefits strong, .portfolio strong {
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--midlight-blue);
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5rem auto;
+    gap: 2rem;
+}
+
+.benefitsGrid > article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: rgba(228, 251, 251, 0.584);
+    border-radius: 50%;
+    padding: 1rem 2.5rem;
+    color: var(--dark-blue);
+}
+
+.benefitsGrid > article p{
+    font-size: 0.9rem;
+}
+
+.benefitsGrid > article img{
+    width: 80px;
+    height: 80px;
+}
+
+
+/******************* PORTFOLIO ********************/
+
+.portfolioGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 4rem auto;
+}
+
+
+/****************** SUBSCRIPTIONS ******************/
+
+.subscriptions {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 13rem auto;
+}
+
+.subscriptions > article {
+    padding: 5rem 2rem 3rem 2rem;
+    color: white;
+    background-color: #9DD3FF;
+}
+
+.subscriptions > article:nth-child(2) {
+    transform: scale(1.15);
+}
+
+.subscriptions > article:nth-child(3) {
+    transform: scale(0.9);
+}
+
+
+.subscriptions > article h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.subscriptions > article .features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto;
+    gap: 3rem;
+    color: var(--midark-blue);
+}
+
+.subscriptions > article span {
+    padding: 0 2rem 0 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 15px;
+}
+
+.subscriptions > article button {
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: var(--midlight-blue);
+    background-color: white;
+    height: 4.5rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 900px){
+    /************ BENIFITS *************/
+
+.benefits, .portfolio {
+    width: 90%;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.benefitsGrid > article {
+    width: 250px;
+    height: 250px;
+}
+
+.benefitsGrid > article p{
+    font-size: 0.85rem;
+}
+
+.benefitsGrid > article img{
+    width: 65px;
+    height: 65px;
+}
+
+/******************* PORTFOLIO ********************/
+
+.portfolioGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+
+/****************** SUBSCRIPTIONS ******************/
+
+.subscriptions {
+    width: 95%;
+}
+
+.subscriptions > article {
+    padding: 3rem 1.5rem 2rem 1.5rem;
+}
+
+.subscriptions > article h1 {
+    font-size: 2.5rem;
+}
+
+.subscriptions > article .features {
+    gap: 2rem;
+}
+
+.subscriptions > article span {
+    font-size: 0.7rem;
+}
+
+.subscriptions > article button {
+    height: 3.5rem;
+    font-size: 1.2rem;
+}
+
+}
+
+
+@media screen and (max-width: 600px){
+    /************ BENIFITS *************/
+
+.benefits, .portfolio {
+    width: 95%;
+}
+
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.benefitsGrid > article {
+    width: 250px;
+    height: 250px;
+    padding: 1rem 2.5rem;
+}
+
+.benefitsGrid > article p{
+    font-size: 0.85rem;
+}
+
+.benefitsGrid > article img{
+    width: 65px;
+    height: 65px;
+}
+/******************* PORTFOLIO ********************/
+
+.portfolioGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+/****************** SUBSCRIPTIONS ******************/
+
+.subscriptions {
+    width: 95%;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.subscriptions > article {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 2rem 1.5rem;
+}
+
+.subscriptions > article:nth-child(2) {
+    transform: scale(1);
+}
+
+.subscriptions > article:nth-child(3) {
+    transform: scale(1);
+}
+
+
+
+}

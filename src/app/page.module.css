@@ -1,168 +1,512 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+.body {
+background: url("/bg.png") center/cover;
+background-repeat: no-repeat;
+padding-bottom: 20rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+/************ Main ****************/
+.video {
+  width: 100%;
+  object-fit: cover;
+  height: calc(100vh - 6rem);
 }
 
 .main {
+  position: relative;
+}
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: linear-gradient(90deg, rgba(54, 237, 254, 0.37), rgba(0, 0, 0, 0.151));
+}
+
+/************** BENIFIT ***************/
+
+.benefit {
+  display: flex;
+  width: 90%;
+  margin: 4rem auto;
+  gap: 3rem;
+  min-height: 30rem;
+}
+
+.benefit .text {
+  color: var(--dark-blue);
+}
+
+.benefit .text h1 {
+  font-size: 2.6rem;
+  font-style: italic;
+  padding-bottom: 2rem;
+}
+
+.benefit .text p {
+  font-size: 20px;
+}
+
+.benefit .image {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefit .image .minirose:nth-child(2) {
+  position: absolute;
+  top: 100px;
+  left: 80px;
+}
+
+.benefit .image .minirose:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 130px;
+}
+.benefit .image .minirose:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  right: 140px;
+}
+
+/*********** PROJECTS **************/
+
+.projects, .services {
+  width: 90%;
+  margin: 8rem auto;
+  position: relative;
+}
+
+.projects h4 strong, .services h4 strong {
+  font-weight: 900 !important;
+  color: var(--midlight-blue);
+}
+
+.projects .animation, .services .animation {
+  width: 210vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  font-size: 4.5rem;
+  font-weight: 800;
+  gap: 4rem;
+  font-style: italic;
+  color: var(--dark-blue);
+  animation: 20s infinite  slide;
+}
+
+.projects .slider {
+  position: relative;
+ transition: transform 0.5s ease-in-out;
+}
+
+.projects .arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*********** SERVICES *****************/
+
+.services .servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+  margin: 4rem auto;
+  width: 100%;
+}
+
+
+.services .servicesGrid > div {
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(30px);
+  padding: 1rem 3rem;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1.5s ease-in-out;
+}
+
+.services .servicesGrid > div p {
+  opacity: 0;
+  transform: rotateY(180deg);
+  display: none;
+  overflow: hidden;
+  transition: 0.5s ease-in;
+}
+
+.services .servicesGrid > div img {
+  width: 80px;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+
+.services .servicesGrid > div:hover {
+  transform: rotateY(180deg);
+}
+
+
+.services .servicesGrid > div:hover img {
+  width: 0%;
+  opacity: 0;
+  display: none;
+}
+
+.services .servicesGrid > div:hover p {
+  width: 100%;
+  display: block;
+  opacity: 1;
+}
+
+.services .servicesGrid > div:nth-child(1) {
+  background-color: rgb(114, 255, 243, 0.3);
+}
+
+.services .servicesGrid > div:nth-child(2) {
+  background-color: rgb(114, 201, 255, 0.3);
+}
+
+.services .servicesGrid > div:nth-child(3) {
+  background-color: rgb(191, 114, 255, 0.3);
+}
+
+.services .servicesGrid > div:nth-child(4) {
+  background-color: rgb(255, 142, 114, 0.3);
+}
+
+/********************* CONTACT *******************/
+
+.contact {
+  width: 100vw;
+  margin: 20rem auto;
+  height: 300px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  padding: 2rem 0;
+  align-items: center;
+  background: url("/images/contact.png") center/cover;
+  background-attachment: fixed;
+
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
+.contact h1 {
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
+  color: var(--dark-blue);
 }
 
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
+.contact button {
+  color: var(--light-blue);
+  background-color: var(--midlight-blue);
   border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  outline: none;
+  padding: 1.5rem 5rem;
+  font-size: 20px;
+  font-weight: 800;
+
+}
+
+
+
+@keyframes slide {
+  0% {
+    translate: -120vw 0;
+  }
+
+  25% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: -120vw 0;
+  }
+
+  75% {
+    translate: 0 0;
+  }
+
+  100% {
+    translate: -120vw 0;
+  }
+
+}
+
+/***************** RESPONSIVE ***************/
+@media screen and (max-width: 950px){
+.projects .animation, .services .animation {
+  width: 202vw;
+  font-size: 3rem;
+  gap: 2rem;
+}
+
+.projects .content {
+  width: 500px;
+  height: 350px;
+
+}
+.projects .content.appear {
+  width: 500px;
+}
+
+.projects .arrows {
+  width: 92vw;
+}
+
+.projects .arrows img {
+  width: 60px;
+  height: 40px;
+}
+/*************** SERVICES **************/
+.services .servicesGrid {
+  gap: 7%;
+  margin: 3rem auto;
+}
+
+
+.services .servicesGrid > div {
+  width: 300px;
+  height: 300px;
+  padding: 1rem 2rem;
+}
+
+.services .servicesGrid > div p {
+  font-size: 0.9rem;
+}
+
+/***************** CONTACT *****************/
+.contact {
+  height: 350px;
+  padding: 1.5rem 0;
+
+}
+
+.contact h1 {
+  font-size: 2.8rem;
+  margin-bottom: 5rem;
+}
+
+.contact button {
+  padding: 2rem 5rem;
+  font-size: 24px;
+
+}
+
+
+}
+
+@media screen and (max-width: 740px){
+
+.benefit {
+  flex-direction: column;
   justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
-}
-
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
   align-items: center;
-  gap: 8px;
+  width: 95%;
+  margin: 4rem auto;
+  gap: 3rem;
+  min-height: 30rem;
 }
 
-.footer img {
-  flex-shrink: 0;
+.benefit .text h1 {
+  font-size: 2.2rem;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+.benefit .text p {
+  font-size: 16px;
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
+/************** PROJECTS *****************/
+.projects .animation, .services .animation {
+  width: 220vw;
+  font-size: 2.2rem;
+  gap: 2rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.projects .content {
+  width: 300px;
+  height: 350px;
+
+}
+.projects .content.appear {
+  width: 300px;
+}
+
+.projects .arrows {
+  width: 92vw;
+}
+
+.projects .arrows img {
+  width: 40px;
+  height: 30px;
+}
+
+.projects .content .text {
+  padding: 0.5rem 2rem 1.5rem 2rem;
+}
+
+.projects .content .text h1 {
+  font-size: 2rem;
+}
+
+.projects .content .text p {
+  font-size: 0.9rem;
+}
+/*************** SERVICES **************/
+.services .servicesGrid {
+  gap: 7%;
+  margin: 3rem auto;
+}
+
+
+.services .servicesGrid > div {
+  width: 300px;
+  height: 300px;
+  padding: 1rem 2rem;
+}
+
+.services .servicesGrid > div p {
+  font-size: 0.9rem;
+}
+/*************** SERVICES **************/
+.services .servicesGrid {
+  gap: 5%;
+  margin: 2.5rem auto;
+}
+
+
+.services .servicesGrid > div {
+  width: 220px;
+  height: 220px;
+  padding: 1rem 2rem;
+}
+
+.services .servicesGrid > div p {
+  font-size: 0.8rem;
+}
+
+/***************** CONTACT *****************/
+.contact {
+  height: 350px;
+  padding: 1.5rem 0;
+
+}
+
+.contact h1 {
+  font-size: 2.3rem;
+  margin-bottom: 3rem;
+}
+
+.contact button {
+  padding: 2rem 2.5rem;
+  font-size: 20px;
+
+}
+
+}
+
+@media screen and (max-width: 550px) {
+.benefit .image .minirose:nth-child(2) {
+  position: absolute;
+  top: 160px;
+  left: -80px;
+}
+
+.benefit .image .minirose:nth-child(3) {
+  position: absolute;
+  bottom: -30px;
+  left: 200px;
+}
+.benefit .image .minirose:nth-child(4) {
+  position: absolute;
+  bottom: 100px;
+  right: 200px;
+}
+
+.benefit .text h1 {
+  font-size: 2rem;
+}
+
+.benefit .text p {
+  font-size: 14px;
+}
+
+/*************** SERVICES **************/
+.services .servicesGrid {
+  grid-template-columns: 1fr;
+  gap: 5%;
+  margin: 2.5rem auto;
+}
+
+/***************** CONTACT *****************/
+
+.contact h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact button {
+  padding: 1.5rem 2rem;
+  font-size: 16px;
+
+}
+
+
+}
+
+
+@media screen and (max-width: 450px){
+.video {
+  width: 100%;
+  object-fit: cover;
+  height: calc(80vh - 6rem);
+}
+
+/************* PROJECTS ***********/
+.projects .animation, .services .animation {
+  width: 220vw;
+  font-size: 1.7rem;
+}
+
+.projects .content {
+  width: 250px;
+  height: 350px;
+
+}
+.projects .content.appear {
+  width: 250px;
+}
+
+.projects .arrows img {
+  width: 30px;
+  height: 20px;
+}
+
+.projects .content .text {
+  padding: 0.5rem 1rem 1.5rem 1rem;
+}
+
+.projects .content .text h1 {
+  font-size: 2rem;
+}
+
+.projects .content .text p {
+  font-size: 0.85rem;
+}
 }
