@@ -21,11 +21,9 @@ export default function RootLayout({
           setIsAuthenticated(true);
         } else {
           setIsAuthenticated(false);
-          window.location.href = "/"; 
         }
       } catch {
         setIsAuthenticated(false);
-        window.location.href = "/";
       } finally {
         setLoading(false);
       }
