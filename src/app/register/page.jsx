@@ -24,6 +24,7 @@ const page = () => {
     if (res.ok) {
       const user = await res.json();
       console.log(user);
+      window.location.href ="https://digital-agency-front-end-rosy.vercel.app/dashboard/statistics";
       setUsername("");
       setPassword("");
     } else {

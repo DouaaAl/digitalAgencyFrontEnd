@@ -23,6 +23,7 @@ const page = () => {
           if (res.ok) {
             setIsAuthenticated(true);
           } else {
+            window.location.href = "/";
             setIsAuthenticated(false);
           }
         } catch {
