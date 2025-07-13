@@ -118,7 +118,7 @@ export default function Home() {
           </div>
           <div className={styles.box}>
             {
-              data.map((item: any, SlideIndex: number)=>{
+              data?.map((item: any, SlideIndex: number)=>{
                 return              <Mainproject key={SlideIndex} index={index} sliderIndex={SlideIndex} item={data[SlideIndex]} />
         
               })
