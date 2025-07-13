@@ -23,7 +23,7 @@ const page = () => {
 
     if (res.ok) {
       const user = await res.json();
-      window.location.href = '/dashboard/statistics';
+      alert("user registeration successeful");
       setUsername("");
       setPassword("");
     } else {

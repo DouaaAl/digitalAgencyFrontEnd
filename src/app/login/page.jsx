@@ -24,10 +24,11 @@ const page = () => {
       }
 
       const user = await res.json();
-      window.location.href = '/dashboard/statistics';
+      alert("user LoggedIn successfully");
       setUsername("");
       setPassword("");
     } catch (err) {
+      console.log(err);
       console.error(err);
     }
   };
