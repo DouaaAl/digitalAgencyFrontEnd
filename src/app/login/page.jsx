@@ -21,8 +21,6 @@ const page = () => {
 
       if (!res.ok) {
         const errData = await res.json();
-        setError(errData.message || "Login failed");
-        return;
       }
 
       const user = await res.json();
