@@ -15,7 +15,7 @@ export default function Home() {
   }]);
 
   const addSlider = () =>{
-    if (index >= data.length -1){
+    if (index >= data?.length -1){
       setIndex(0);
     } else {
       setIndex(index + 1);
@@ -25,7 +25,7 @@ export default function Home() {
 
   const minusSlider = () =>{
     if(index <= 0){
-      setIndex(data.length -1);
+      setIndex(data?.length -1);
     } else{
       setIndex(index - 1);
     }
@@ -33,9 +33,15 @@ export default function Home() {
   }
 
   const getData = async()=>{
-    let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`);
-    let datares = await res.json();
-    setData(datares);
+    try {
+      let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`);
+      let datares = await res.json();
+      setData(datares);      
+    } catch (error) {
+      console.error(error)
+      console.log(error);
+    }
+
   }
 
   useEffect(()=>{
