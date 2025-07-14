@@ -24,7 +24,7 @@ const page = () => {
       }
 
       const user = await res.json();
-      indow.location.href = "https://digital-agency-front-end-rosy.vercel.app/dashboard/statistics";
+      window.location.href = "https://digital-agency-front-end-rosy.vercel.app/dashboard/statistics";
       setUsername("");
       setPassword("");
     } catch (err) {
